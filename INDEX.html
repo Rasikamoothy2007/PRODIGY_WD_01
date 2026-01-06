@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ProDigy Infotech | Task-01</title>
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        #navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: transparent;
+            transition: 0.3s ease;
+            z-index: 1000;
+        }
+
+        /* Navbar when scrolled */
+        #navbar.scrolled {
+            background: #0a3d62;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        /* Logo */
+        .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* Navigation links */
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 6px 12px;
+            transition: 0.3s;
+        }
+
+        /* Hover effect */
+        .nav-links a:hover {
+            background: white;
+            color: lightblue;
+            border-radius: 5px;
+        }
+
+        /* Sections */
+        section {
+            height: 100vh;
+            padding-top: 100px;
+            text-align: center;
+        }
+
+        #home {
+            background: linear-gradient(to right, #1e90ff, #00bfff);
+            color: white;
+        }
+
+        #about, #services, #contact {
+            background:linear-gradient(to right, #1e90ff, #00bfff);
+             color: white;
+        }
+
+        h1, h2 {
+            margin-bottom: 15px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav id="navbar">
+        <div class="logo">ProDigy Infotech</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sections -->
+    <section id="home">
+        <h1>Task-01</h1>
+        <p>Responsive Landing Page</p>
+    </section>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>ProDigy Infotech Internship Task</p>
+    </section>
+
+    <section id="services">
+        <h2>Services</h2>
+        <p>Web Development | UI Design | Programming</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: info@prodigyinfotech.com</p>
+    </section>
+
+    <script>
+        // Change navbar style on scroll
+        window.addEventListener("scroll", function () {
+            const navbar = document.getElementById("navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+</html>
